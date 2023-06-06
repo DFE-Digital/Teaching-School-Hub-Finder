@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
 
+  get "/healthcheck", to: "monitoring#healthcheck", format: :json
+
   get "/pages/home", to: "pages#home"
 
   scope via: :all do
