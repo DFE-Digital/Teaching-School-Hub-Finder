@@ -3,3 +3,12 @@ $govuk-new-link-styles: true;
 $govuk-assets-path: "/";
 
 @import "govuk-frontend/govuk/all";
+
+.hub-results {
+  border-top: 1px solid govuk-colour("mid-grey");
+
+  .hub-result {
+    padding-top: 20px;
+    border-bottom: 1px solid govuk-colour("mid-grey");
+  }
+}

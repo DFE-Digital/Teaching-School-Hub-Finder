@@ -101,6 +101,7 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.12.0)
+    geocoder (1.8.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     govuk-components (4.0.0)
@@ -207,6 +208,8 @@ GEM
       rgeo (>= 1.0.0)
     rgeo-geojson (2.1.1)
       rgeo (>= 1.0.0)
+    rgeo-proj4 (4.0.0)
+      rgeo (~> 3.0.0)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
@@ -305,6 +308,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   dotenv-rails
+  geocoder
   govuk-components
   govuk_design_system_formbuilder
   jsbundling-rails
@@ -315,6 +319,7 @@ DEPENDENCIES
   rails (~> 7.0.4, >= 7.0.4.3)
   rgeo
   rgeo-geojson
+  rgeo-proj4
   rspec
   rspec-rails
   rubocop-govuk

@@ -6,10 +6,6 @@ class SearchController < ApplicationController
   def results
     @search = SearchForm.new(params.permit(:location) )
 
-    if @search.valid?
-      raise NotImplementedError
-    else
-      render 'form', status: :unprocessable_entity
-    end
+    render 'form', status: :unprocessable_entity unless @search.valid?
   end
 end

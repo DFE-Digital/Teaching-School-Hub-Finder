@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_134451) do
 
   create_table "local_authorities", force: :cascade do |t|
     t.string "name"
-    t.geometry "geometry", limit: {:srid=>27700, :type=>"geometry"}
+    t.geometry "geometry", limit: {:srid=>0, :type=>"geometry"}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["geometry"], name: "index_local_authorities_on_geometry", using: :gist

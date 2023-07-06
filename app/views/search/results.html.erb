@@ -1,0 +1,38 @@
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Teaching school hubs near <%= @search.location %></h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      <%= link_to 'Change location', { action: :form } %>
+    </p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds hub-results">
+    <% @search.hubs.each do |hub| %>
+      <div class="hub-result">
+        <h3 class="govuk-heading-m">
+          <% if hub.website %>
+            <%
+              address = hub.website
+              address = "//#{address}" unless address.starts_with? /https?:\/\//
+            %>
+            <%= link_to hub.name, address %>
+          <% else %>
+            <%= hub.name %>
+          <% end %>
+        </h3>
+        <p>Email: <%= mail_to hub.email %></p>
+        <% if hub.phone.present? %>
+          <p>Phone: <%= phone_to hub.phone %></p>
+        <% end %>
+        <p>Area: <%= hub.areas.join(', ') %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

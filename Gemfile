@@ -6,11 +6,14 @@ ruby "3.1.2"
 gem "activerecord-postgis-adapter"
 gem "bootsnap", require: false
 gem "bundler", "~> 2.4"
+gem 'geocoder'
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 gem "rgeo"
 gem "rgeo-geojson"
+gem "rgeo-proj4"
+
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 gem "cssbundling-rails"

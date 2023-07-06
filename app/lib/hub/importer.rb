@@ -56,7 +56,7 @@ class Hub::Importer
     inversed_map = @authorities_with_comas_map.invert
 
     mapped.split(', ').map do |str|
-      inversed_map[str] || ALIASES[str] || str
+      inversed_map[str] || str
     end
   end
 

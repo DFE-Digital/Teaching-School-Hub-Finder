@@ -6,4 +6,9 @@ class SearchForm
   attribute :location
 
   validates :location, presence: true
+
+  def hubs
+    authorities = LocalAuthority.search(location)
+    Hub.by_local_authority(*authorities.pluck(:name))
+  end
 end
